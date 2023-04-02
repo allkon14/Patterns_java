@@ -12,8 +12,6 @@ class BasicHome extends Home {
     }
     @Override
     public double getPrice() {
-        // There is no additional cost for a basic home
-        // So, returning the basic price is sufficient.
         return basePrice;
     }
 }
