@@ -1,8 +1,17 @@
+
+//Паттерн Builder (Строитель) предназначен для отделения процесса конструирования сложного объекта от
+//его представления.
+
+//Шаблон Builder был введен для решения некоторых проблем с шаблонами проектирования Factory и Abstract Factory, 
+// когда объект содержит много атрибутов. Существуют три основные проблемы с шаблонами проектирования Factory и 
+// Abstract Factory, когда объект содержит много атрибутов.
+
+
 class Computer {
-    
+
     private String HDD;
     private String RAM;
-    
+
     private boolean isGraphicsCardEnabled;
     private boolean isBluetoothEnabled;
 
@@ -36,11 +45,11 @@ class Computer {
                 "\nBluetooth Enabled: "+isBluetoothEnabled);
         System.out.println();
     }
-    
+
     public static class ComputerBuilder{
         private String HDD;
         private String RAM;
-        
+
         private boolean isGraphicsCardEnabled;
         private boolean isBluetoothEnabled;
 
@@ -74,8 +83,7 @@ public class Builder {
         comp.PrintInfo();
 
         Computer comp2 = new Computer.ComputerBuilder(
-                "512 GB", "4 GB").setBluetoothEnabled(false)
-                .setGraphicsCardEnabled(true).build();
+                "512 GB", "4 GB").setBluetoothEnabled(false).build();
         comp2.PrintInfo();
     }
 }
