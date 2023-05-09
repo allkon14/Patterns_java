@@ -75,4 +75,15 @@ public class UnitTest {
         assertEquals(total_test,Visitor.calculatePrice(itemsss), 0.001);
         System.out.println("Total Cost = " + total_test + '\n');
     }
+    @Test
+    public void Test7(){
+        System.out.println();
+        ItemElement[] itemsss = new ItemElement[]{new Book(50, "1234"),new Book(0, "5678"),
+                new Fruit(10, 1.50f, "Banana"), new Fruit(5, 2.5f, "Apple")};
+
+        float total_test = 50 + 10 * 1.5f + 0 + 5 * 2.5f;
+
+        assertEquals(total_test,Visitor.calculatePrice(itemsss), 0.001);
+        System.out.println("Total Cost = " + total_test + '\n');
+    }
 }
